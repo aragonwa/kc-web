@@ -1,0 +1,51 @@
+//BREADCRUMB.LESS
+//King County Breadcrumb styles
+.main-breadcrumb-row {
+    border-bottom: 1px solid #DBD8CC;
+    margin-top:0;
+    border-top: 6px solid @breadcrumb-border;
+    padding-bottom:0;
+    padding-top:0;
+}
+.main-breadcrumb-row button {
+   margin-top: 7px;
+}
+.main-breadcrumb {
+    padding: 12px 0px;
+    margin-bottom: 0;
+    margin-left:85px;
+    @media (min-width: @screen-md-min) {
+           margin-left:0;
+    }
+    a {
+      &:link {
+        border-bottom: none;
+      }
+      &:hover,
+      &:focus {
+        border-bottom: @link-dotted-underline;
+      }
+    }
+    span.fa.fa-angle-double-right {
+      padding: 0 5px 0 9px;
+      color: #d6d5d1;
+    }
+}
+.main-breadcrumb-row {
+    button {
+        .button-variant(@gray-darker; hsl(71, 61%, 51%); #96BF1F);
+        margin-right:10px;
+        margin-bottom: 10px;
+        //Add per beth
+        //padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
+    }
+}
+.breadcrumb {
+    > li {
+        + li:before {
+              content: none;
+              padding: 0;
+              color: inherit;
+        }
+    }
+}

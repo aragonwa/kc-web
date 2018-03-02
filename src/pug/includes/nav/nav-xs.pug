@@ -1,0 +1,33 @@
+nav#nav-xs.navbar.navbar-inverse(role='navigation')
+  .container.visible-xs
+    .navbar-header.remove-border-bottom
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-dropdown-xs')
+        span.sr-only Toggle navigation
+        span.fa.fa-search.fa-2x
+      a(href='/')
+        img.img-responsive(src='/img/KClogo-horiz-white-sm-xs.png', alt='King County logo')
+      button#nav-search-btn-xs.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-dropdown-xs')
+        span.sr-only Toggle navigation
+        span.fa.fa-bars.fa-2x
+    #navbar-dropdown-xs.collapse.navbar-collapse
+      form.navbar-form.search-form(role='search', action='/search-results.html', method='get', accept-charset='UTF-8')
+        label.sr-only(for='xs-search-input') Search kingcounty.gov
+        input(name='utf8', type='hidden', value='✓')
+        input.form-control(id="xs-search-input", type='text', name='q', placeholder='Search Kingcounty.gov')
+        button.btn.btn-link.search-form-btn(type='submit')
+          span.sr-only Search KingCounty.gov
+          span.fa.fa-search
+      ul.nav.navbar-nav
+        li
+          a(href='/')
+            span(class="") Home
+        li
+          a(href='/how-do-i')
+            span(class="") How Do I...
+        li
+          a(href='/services')
+            span(class="") Services
+        li
+          a(href='/about') About King County
+        li
+          a(href='/depts') Departments

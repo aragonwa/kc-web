@@ -1,0 +1,17 @@
+doctype html
+html.no-js(lang="en")
+  include head
+  body(data-hero-sm="/img/hero-driftwood-sm.jpg" data-hero-lg="/img/hero-driftwood.jpg")
+    a.sr-only.skip-contents(href="#main-content-sr") Skip to main content
+    header.hidden-print
+      include nav/nav
+    include main
+    include footer
+    // Javascript files
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    //- script(src='/js/main.js')
+    //set the background image
+    script.
+      //- $(window).on("resize", function(){chooseBG("/img/hero-driftwood-sm.jpg", "/img/hero-driftwood.jpg")}).resize();
+    block custom-js

@@ -1,0 +1,96 @@
+//KC-VERTICAL-STORY-PANEL
+
+.row.vertical-story-panel {
+  position:relative;
+  background-color: $white;
+  &.vertical-story-panel-border{
+    border-top: solid 2px $brand-primary;
+  }
+  &.vertical-story-panel-success {
+    color: $state-success-text;
+    background-color: #E1E9C1;
+  }
+  &.vertical-story-panel-info {
+    color: $state-info-text;
+    background-color: $state-info-bg;
+  }
+  &.vertical-story-panel-default {
+    color: $state-default-text;
+    background-color: $state-default-bg;
+  }
+  &.vertical-story-panel-primary {
+    color: $state-primary-text;
+    background-color: $state-primary-bg;
+    a:not(.vertical-story-panel-arrow):not(.btn){
+      color:$footer-link-color;
+      border-bottom:1px dotted #fff;
+      &:visited {color: $footer-link-color-visited; }
+      &:hover {
+        color:$footer-link-color;
+        text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.9);
+        border-bottom:none;
+      }
+      &:active{
+        border-bottom:$link-dotted-underline;
+      }
+    }
+  }
+  .vertical-story-panel-head {
+    position: relative;
+    //margin-bottom: 10px;
+  }
+  .vertical-story-panel-footer {
+    padding-top:20px;
+    .col-sm-12 {
+      padding-bottom:30px;
+    }
+  }
+  .vertical-story-panel-title {
+    font-size: 18px;
+    padding:20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color:#fff;
+    width:100%;
+    margin-top:0;
+  }
+  span.fa-stack.fa-2x{
+    position:absolute;
+    z-index:4;
+    right:0;
+    left:0;
+    top:-26px;
+    margin-left:auto;
+    margin-right:auto;
+
+  }
+  @media (min-width: 768px) {
+    .vertical-story-panel-title {
+      font-size: 25px;
+      width:70%;
+      &.vertical-story-panel-title-tl {
+        margin-top:40px;
+        position: absolute;
+        top:0;
+        left:0;
+      }
+      &.vertical-story-panel-title-tr {
+        margin-top:40px;
+        position: absolute;
+        top:0;
+        right:0;
+      }
+      &.vertical-story-panel-title-bl {
+        margin-bottom:40px;
+        position: absolute;
+        bottom:0;
+        left:0;
+      }
+      &.vertical-story-panel-title-br {
+        margin-bottom:40px;
+        position: absolute;
+        bottom:0;
+        right:0;
+      }
+    }
+  }
+}

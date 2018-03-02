@@ -1,0 +1,26 @@
+extends includes/base
+block whichtheme
+  - var theme = 'default'
+block isfullwidth
+  - var colSize = 'col-md-12'
+block sidebar
+  // SIDENAV
+block breadcrumb
+  include includes/breadcrumb
+block main-content
+  .row.addon-row.addon-row-attached
+      .col-sm-12
+          .jumbotron
+            h1 King County Development
+            p Testing pages
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      .col-md-6
+        ul.list-unstyled
+          -htmlFiles = ["theme-default","theme-caring", "theme-corporate", "theme-environment"]
+          each file in htmlFiles
+            //- -file = file.split('.')[0]
+            -file = file +'.html'
+            li
+              a(href= file)
+                !=file

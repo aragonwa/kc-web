@@ -1,0 +1,36 @@
+//== Scaffolding
+// ## Settings for some of the most global styles.
+
+// styles for '<html>`.
+html, body {
+  overflow-x: hidden; 
+}
+//** styles for background image on `<body>`.
+body{
+    background-image:  none;
+    background-repeat: no-repeat;
+    //border-top: 3px solid @global-nav-bg;
+  	-webkit-background-size: 100% auto;
+  	-moz-background-size: 100% auto;
+  	-o-background-size: 100% auto;
+  	background-size: 100% auto;
+}
+// Links
+a {
+  &:link {
+     border-bottom: @link-dotted-underline;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+  &:active {  
+    border-bottom: 1px solid @gray; 
+    color:darken(@brand-primary, 10%);
+  }
+
+}
+//Remove under from links
+.remove-link-underline a, .remove-border-bottom a{
+  border-bottom: none;
+}
